@@ -132,20 +132,58 @@ class ViewController: UIViewController {
         }
 }
 
+  @IBAction func StartDocumentButton(_ sender: Any) {
+        do {
+            //Start Document screen 
+            let documentCapture = self.amani.document()
+	    documentCapture.setType( type:"XXX_XX_0") //given code from amani for document
+	    //stepId is document page count for 2 page document it must 1
+            guard let documentCaptureView:UIView = try documentCapture.start(stepId:1, completion: { [weak self](previewImage) in
+	    //preview image returns lastly taken photo
+                DispatchQueue.main.async {
+
+                guard let previewVC:UIViewController  = self?.storyboard?.instantiateViewController(withIdentifier: "preview") else {return}
+                ( previewVC as! PreviewVC) .preImage = previewImage
+                
+                    self?.viewContainer?.removeFromSuperview()
+                    self?.navigationController?.pushViewController(previewVC, animated: true)
+                }
+            }) else {return}
+            self.viewContainer = documentCaptureView
+            DispatchQueue.main.async {
+                self.view.addSubview(documentCaptureView)
+            }
+
+        }
+        catch  {
+            print("Unexpected error: \(error).")
+            
+        }
+}
+
   @IBAction func StartIDCardButton(_ sender: Any) {
         do {
-            let idCapture = amani.IdCapture()
-            idCapture.setType( type: "TUR_ID_1")
-            //stepId parameter must be set for wich side of document scanned you need to start both sides for using upload method
-            guard let IdCapture:UIViewController = try idCapture.start(stepId: .front, completion: { (previewImage) in
-            DispatchQueue.main.async {
-                guard let previewVC:UIViewController  = self.storyboard?.instantiateViewController(identifier: "preview") else {return}
+            
+            let idcapture = amani.IdCapture()
+            idcapture.setType( type: documentTypes.TurkishIdNew.rawValue)
+            idcapture.setManualCropTimeout(Timeout: 15) // after 15 second it will show photo button
+            guard let idcaptureVC:UIView = try idcapture.start(completion: { [weak self] (previewImage) in
+                DispatchQueue.main.async {
+                guard let previewVC:UIViewController  = self?.storyboard?.instantiateViewController(withIdentifier: "preview") else {return}
                 ( previewVC as! PreviewVC) .preImage = previewImage
-                self.navigationController?.pushViewController(previewVC, animated: true)
+                    self?.viewContainer?.removeFromSuperview()
+                    self?.navigationController?.pushViewController(previewVC, animated: true)
                 }
-                }) else {return}
-                self.navigationController?.pushViewController(try IdCapture, animated: true)
-        } catch {
+            }) else {return}
+            DispatchQueue.main.async {
+
+            self.viewContainer = idcaptureVC
+            self.view.addSubview(idcaptureVC)
+            }
+            
+        }
+        catch  {
+            print("Unexpected error: \(error).")
             
         }
 }
@@ -189,61 +227,33 @@ func uploadIDCard(){
 func uploadNFC(){
     amani.scanNFC().upload
 }
+//Document Upload
+func uploadDocument(){
+    amani.document().upload{ (status, error) in
+            print(status)
+            print(error)
+        }
+}
+
+//Document Upload
+func uploadDocument(){
+pdfFile:Data //get data from selected filesytem it must be pdf file converted to data 
+    amani.document().upload(file:pdfFile){ (status, error) in
+            print(status)
+            print(error)
+        }
+}
 ```
 
 # Installation
 
-## Via CocoaPods
+## Via Carthage
+Adapt you Cartfile and add the Amani SDK  
+versiyon sonunda xcode versiyonunu ekleyerek derleyiciye göre binary halini indirebilirsiniz. 
+xcode12 => 12.5
+xcode13 => 13
 
-Install using [CocoaPods](http://cocoapods.org) by adding this line to your Podfile:
-
-
-```ruby
-use_frameworks!
-  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => '1.2.6'
 ```
-also add after last end statement of podfile 
+binary "https://raw.githubusercontent.com/AmaniTechnologiesLtd/Public-IOS-SDK/main/Amani.json" == 2.2.1-xcode13
 
-```ruby
-#add following lines end of podfile after last 'end'
-post_install do |installer|
-	installer.pods_project.targets.each do |target|
-	  target.build_configurations.each do |config|
-	    config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-	  end
-	end
-end
 ```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
-
-<!-- ## Getting Results 
-
-###### Swift
-
-```swift
-extension ViewController:AmaniSDKDelegate{
-    func onConnectionError(error: String?) {
-        //do whatever when connection error
-    }
-    func onNoInternetConnection() {
-        //do whatever when no internet connection
-    }
-
-    func onKYCSuccess(CustomerId: Int) {
-        //do whatever when customer approved
-    }
-
-    func onKYCFailed(CustomerId: Int, Rules: [[String : String]]?) {
-        // Returns uncompleted fields
-    }
-
-    func onTokenExpired() {
-    	// returns when token expired. Token needs to be refreshed and restart instance 
-    }
-}
-``` -->
