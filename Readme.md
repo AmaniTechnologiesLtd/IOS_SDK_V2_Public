@@ -255,5 +255,12 @@ xcode13 => 13
 
 ```
 binary "https://raw.githubusercontent.com/AmaniTechnologiesLtd/Public-IOS-SDK/main/Amani.json" == 2.2.1-xcode13
-
 ```
+
+## Via Manual
+
+You can check our compiled frameworks for your version from the link 
+```
+https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/tree/main/Carthage
+```
+
