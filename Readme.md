@@ -7,7 +7,8 @@
     - [Permissions](#permissions)
     - [Integration](#integration)
 - [Installation](#Installation)
-    - [Via CocoaPods](#via-cocoaPods)
+    - [Via Carthage](#via-carthage)
+    - [Via Manual](#via-manual)
 
 
 # Overview
