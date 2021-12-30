@@ -1,0 +1,4 @@
+binary "https://raw.githubusercontent.com/AmaniTechnologiesLtd/Public-IOS-SDK/main/Amani.json" "2.2.2"
+github "JonasGessner/JGProgressHUD" "v2.2"
+github "airbnb/lottie-ios" "1132c03a6e4917988d78f865c3f3a24f6f4a87c3"
+github "hackiftekhar/IQKeyboardManager" "v6.5.6"
