@@ -1,0 +1,4 @@
+github "JonasGessner/JGProgressHUD"
+github "airbnb/lottie-ios" "master"
+binary "https://raw.githubusercontent.com/AmaniTechnologiesLtd/Public-IOS-SDK/main/Amani.json"
+github "hackiftekhar/IQKeyboardManager" == 6.5.6
