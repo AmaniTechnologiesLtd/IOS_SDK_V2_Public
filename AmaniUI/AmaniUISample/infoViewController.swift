@@ -37,7 +37,7 @@ class infoViewController: UIViewController {
         let amaniUI = AmaniUI.sharedInstance
         let customer = CustomerRequestModel(name: "", email: email ?? "", phone: phone ?? "", idCardNumber: tckn!)
         let nviData = NviModel(documentNo: DocNumber ?? "", dateOfBirth: BirthDate ?? "" , dateOfExpire: ExpDate ?? "")
-        amaniUI.start(parentVC: self, server: "https://tr5.amani.ai", username: "test@bitaksi.com", password: "dr!&$ip2xeXfAbS4VaK5", customer: customer, nviData: nviData){ (CustomerID) in
+        amaniUI.start(parentVC: self, server: "https://tr5.amani.ai", username: "SERVER", password: "PASSWORD", customer: customer, nviData: nviData){ (CustomerID) in
             print(CustomerID)
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "tebrikler2", sender: nil)
