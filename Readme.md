@@ -335,12 +335,9 @@ If you want to upload from another screen like in our example you need to define
 
 ## Via Carthage
 Adapt you Cartfile and add the Amani SDK  
-versiyon sonunda xcode versiyonunu ekleyerek derleyiciye göre binary halini indirebilirsiniz. 
-xcode12 => 12.5
-xcode13 => 13
 
 ```
-binary "https://raw.githubusercontent.com/AmaniTechnologiesLtd/Public-IOS-SDK/main/Amani.json" == 2.2.1-xcode13
+binary "https://raw.githubusercontent.com/AmaniTechnologiesLtd/Public-IOS-SDK/main/Amani.json"
 ```
 
 ## Via Manual
