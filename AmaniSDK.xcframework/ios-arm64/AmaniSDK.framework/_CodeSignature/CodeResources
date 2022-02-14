@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		k4ScjHlyDBnxb7oNBRQ5ZyAvEJU=
+		GV+Kh1EAFhiM8lzcyZwlxKsulbs=
 		</data>
 		<key>AutoSelfieCaptureView.nib</key>
 		<data>
-		Pc4ywOsUof10U5hxmsBEcAD2RQY=
+		wLzH1QNym2R+BofXzEyIPqLtCXk=
 		</data>
 		<key>DocumentVC.nib</key>
 		<data>
-		WK9KWLeYYU4efKVPGxeoDEcjxfc=
+		TpVsDS84vCUVsiMNQCE9/GeKDrQ=
 		</data>
 		<key>Headers/Amani.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>IDCaptureView.nib</key>
 		<data>
-		c4SRcdmKYt9ThJXH2iNCWeAqa1U=
+		9Uh5Q9xP7aQPFWxXgntQpf7WlCE=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		8TY6gJauxz7MlEgfJBgZoICqrJQ=
+		RzLkSy1+ASQZEMOrdQS8LKKbBdY=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		8TY6gJauxz7MlEgfJBgZoICqrJQ=
+		RzLkSy1+ASQZEMOrdQS8LKKbBdY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>SelfieCaptureView.nib</key>
 		<data>
-		4eFJYOqQ8mvUpmk+JW7+bkC4Mnk=
+		witQQISTxhG0XnFBIH6+Lq0u4E4=
 		</data>
 		<key>SignatureVC.nib</key>
 		<data>
-		knvJmHFkcru/EvFrcIZPyYHqS2A=
+		xndbFk/z2ZEhRVaUhVIYTDVaj7o=
 		</data>
 		<key>Turkish_ID.pem</key>
 		<data>
@@ -79,21 +79,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FwoMNtVg9dSm76l0eZXwumTDwLyZFdiEfKzq2CpA4d4=
+			FETp9kavHVbQ9q2gXdhzBRzDbiTisY3FAf/R26liE6I=
 			</data>
 		</dict>
 		<key>AutoSelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ud/4H0xOUSarvmRScafrvG6NcWCM7OkIjFLnFjVDMao=
+			lZxYBSA5BaJrzrQ6F6GeEUFJUh4YiOWoosjIIknK3Bw=
 			</data>
 		</dict>
 		<key>DocumentVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vhAtMQCX9M2nUq07K6O8IbGr51s75tfdgbvPEfX2K5Q=
+			gpdVsrgoDBmiWYc/vqRaXxYeHfVrvBQJy4mNbpTYX/E=
 			</data>
 		</dict>
 		<key>Headers/Amani.h</key>
@@ -114,7 +114,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J7xh7oVTVTcL25H432WdlSvN6YWxvPXordz5K4CyWXU=
+			qMIIWyy0wUAvy2jgHidDSCj5DaTQQ3Iqv3s3iQ8M4jA=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -135,7 +135,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YVYIT155eXQm7bPy4VJH+F4FceecTbbLMwVlz4A+q5Y=
+			bWeDvyjEj+h1DH6Cdl+j/U3BZplF70TD4ic3bBnDP/g=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
@@ -156,7 +156,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YVYIT155eXQm7bPy4VJH+F4FceecTbbLMwVlz4A+q5Y=
+			bWeDvyjEj+h1DH6Cdl+j/U3BZplF70TD4ic3bBnDP/g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -170,14 +170,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UgINuA9m72Hq3QYATAU1R9/MKBfqCHzZ6LNu36fWgQQ=
+			xPFvFDiwYpCXqdMGpEIViZrtY4pPYtis0d2gBcAU9h4=
 			</data>
 		</dict>
 		<key>SignatureVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iTbSwmyMFDZpro9K0zspXWEw+ClvMk841mV3ts5cOJA=
+			XgxcSsCx3/yAhus4W6PfNGrY2IUy12+n6uUteDATaJw=
 			</data>
 		</dict>
 		<key>Turkish_ID.pem</key>
