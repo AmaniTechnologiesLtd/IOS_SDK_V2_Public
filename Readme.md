@@ -60,6 +60,7 @@ The minimum requirements for the SDK are:
 ### App permissions
 
 Amani SDK makes use of the device Camera, Location and NFC. If you dont want to use location service please provide in init method. You will be required to have the following keys in your application's Info.plist file:
+
 for NFC: 
 
 ```xml
