@@ -7,6 +7,7 @@
     - [Permissions](#permissions)
     - [Integration](#integration)
 - [Installation](#Installation)
+    - [Via Cocoapods](#via-cocoapods)
     - [Via Carthage](#via-carthage)
     - [Via Manual](#via-manual)
 
@@ -59,14 +60,20 @@ The minimum requirements for the SDK are:
 ### App permissions
 
 Amani SDK makes use of the device Camera, Location and NFC. If you dont want to use location service please provide in init method. You will be required to have the following keys in your application's Info.plist file:
+for NFC: 
 
 ```xml
-<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+    <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
 	<array>
 		<string>A0000002471001</string>
 	</array>
 	<key>NFCReaderUsageDescription</key>
 	<string>This application requires access to NFC to  scan IDs.</string>
+```
+
+For Location:
+
+```xml
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This application requires access to your location to upload the document.</string>
 	<key>NSLocationUsageDescription</key>
@@ -75,10 +82,17 @@ Amani SDK makes use of the device Camera, Location and NFC. If you dont want to 
 	<string>This application requires access to your location to upload the document.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>This application requires access to your location to upload the document.</string>
+```
+
+For Camera:
+
+```xml
 	<key>NSCameraUsageDescription</key>
 	<string>This application requires access to your camera for scanning and uploading the document.</string>
 ```
-**Note**: All keys will be required for app submission.
+
+
+**Note**: You need to add all keys according to your usage. 
 
 ### Grant accesss to NFC
 Enable the Near Field Communication Tag Reading capability in the target Signing & Capabilities. 
@@ -320,6 +334,7 @@ If you want to upload from another screen like in our example you need to define
         }
 ```
 ###### Upload
+
 If you want to upload from another screen like in our example you need to define Amani.sharedInstance and than you can call it upload method
 ```swift
 
@@ -333,7 +348,22 @@ If you want to upload from another screen like in our example you need to define
 
 # Installation
 
+You need to add openSSL package some of our customers wants to use as static library so we remove it from our dependicies.
+When you want to use AmaniSDK you need to be sure openSSL must be installed. 
+
+You can check this link for install via package managers or there is a helper script for compile on your own.
+https://github.com/krzyzanowskim/OpenSSL
+
+## Via Cocoapods
+
+Adapt you Podfile and add the Amani SDK  
+
+```  
+pod 'AmaniSDK', :git => 'https://github.com/AmaniTechnologiesLtd/IOS_SDK_V2_Public.git'
+```
+
 ## Via Carthage
+
 Adapt you Cartfile and add the Amani SDK  
 
 ```
@@ -346,4 +376,3 @@ You can check our compiled frameworks for your version from the link
 ```
 https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/tree/main/Carthage
 ```
-

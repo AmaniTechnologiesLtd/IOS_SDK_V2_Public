@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/AmaniTechnologiesLtd/IOS_SDK_V2_Public"
   spec.license      = "Copyright"
   spec.author       = "Amani"
-  spec.platform     = :ios, "4.2"
+  spec.platform     = :ios, "11.0"
   spec.source       = { :git => 'https://github.com/AmaniTechnologiesLtd/IOS_SDK_V2_Public.git', :tag => "#{spec.version}"}
   # spec.dependency 'Alamofire', '>=5.2'
   # spec.dependency 'SwiftLint'
