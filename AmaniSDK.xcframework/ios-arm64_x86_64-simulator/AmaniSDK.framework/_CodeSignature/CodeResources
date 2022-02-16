@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OBDa7WqT4fEo0G2m7yLdeo7k/OM=
+		LQq0As2D5xxT1aGLasqqwES8R+o=
 		</data>
 		<key>AutoSelfieCaptureView.nib</key>
 		<data>
-		iYGh6bbHDmy9sOLGyMzU6vr/+qM=
+		uehDMPB/491beJQ29vhggt3KkQU=
 		</data>
 		<key>DocumentVC.nib</key>
 		<data>
-		g2yYCgBwcr3riWVsdZiil/Wq8Ns=
+		qKcXncQAvCJ0B81AaO9FioAifhs=
 		</data>
 		<key>Headers/Amani.h</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>IDCaptureView.nib</key>
 		<data>
-		slS/AuzLnWXQSLEjRHTTE78fP08=
+		0h9rszHrGVLbaUfT+IZXZ6dCZlo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0ztELn2Bz3x504W+myFL5oDyGAg=
+		Pz6RKoEimjn9bPC5FQe+2xMQ5Xk=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -86,15 +86,15 @@
 		</data>
 		<key>PoseEstimationCaptureView.nib</key>
 		<data>
-		Q9O6Pw1BX3m+vMj1ICV7N9OEuGA=
+		hTTdQ3GkeP/iLcjKOhvCMKg1NJo=
 		</data>
 		<key>SelfieCaptureView.nib</key>
 		<data>
-		UGdU0p7rnSk/jmXSGPcjvJ2jZHE=
+		McpKwxzVH7LTf5RBxsVnTglmdR4=
 		</data>
 		<key>SignatureVC.nib</key>
 		<data>
-		Fhu5AesKo5uXHHdvpvaJLeGPSLc=
+		AsLdrUrZuyLumvohKWyCYYIui40=
 		</data>
 		<key>Turkish_ID.pem</key>
 		<data>
@@ -107,21 +107,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k+QZRL+Y1PPMZPtCEt9G/i5Fsj9q6fKcoloBSHbpdGA=
+			IqrRp+vn79q3ZzaWsbtmOaCPn4PrDUCmXqUNN/HDc30=
 			</data>
 		</dict>
 		<key>AutoSelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J76eyyfD+uLs2t++H9QNuu0oeoInVn5XT2uu6NeQ0IE=
+			KgBxo4UD7DdqCdnpI9aSjUIQl5FvVkhHzR185HWsLuo=
 			</data>
 		</dict>
 		<key>DocumentVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ib0eF+/kqRJZiacaGN4jvgX8FZoWRf7I63WS0ZjZV0k=
+			XhUYS447kDb7HBu7LbClBSGdPYAEmukJH6L6hCqZtxk=
 			</data>
 		</dict>
 		<key>Headers/Amani.h</key>
@@ -142,7 +142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			liuFBqlCOpDwLBIG8iUB/46ECMAt+XMJCP2FRusWlRU=
+			iA0CzfvoFGT0KP5QWc6+OFoZmZIVSRVZ8XRT4cThOMU=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -240,21 +240,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vEElO1wM+MK5HzeVL+LTjoW6JCueNhrhJB2MFmW8U2c=
+			qcCBntS871Rc2+wr/5JWSelgcNUbNTO387Po92Xl/Hk=
 			</data>
 		</dict>
 		<key>SelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iZiiaRXcqg1BTR2cvRq7cxXv6V0NA6sKZtjsZKIIApk=
+			5wjiLqKTTGOoK2Nbl8WrAIB9EfAddLLAX60X02anneA=
 			</data>
 		</dict>
 		<key>SignatureVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V/iREmxjR2RSZbR+8wYKBD5a9S45cjngesJRvXnfdVA=
+			8kSYnO9TDVPEvc2gpyH2eRfu7GnjmJGgiNnyfhbNQA0=
 			</data>
 		</dict>
 		<key>Turkish_ID.pem</key>
