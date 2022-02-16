@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		GV+Kh1EAFhiM8lzcyZwlxKsulbs=
+		LQq0As2D5xxT1aGLasqqwES8R+o=
 		</data>
 		<key>AutoSelfieCaptureView.nib</key>
 		<data>
-		wLzH1QNym2R+BofXzEyIPqLtCXk=
+		0kVIbuK8ax+rGpuYTBlCSYZfYXU=
 		</data>
 		<key>DocumentVC.nib</key>
 		<data>
-		TpVsDS84vCUVsiMNQCE9/GeKDrQ=
+		bREBxOArr7CJgH3OQ5nf6vRbbgw=
 		</data>
 		<key>Headers/Amani.h</key>
 		<data>
@@ -26,47 +26,51 @@
 		</data>
 		<key>IDCaptureView.nib</key>
 		<data>
-		9Uh5Q9xP7aQPFWxXgntQpf7WlCE=
+		Ib5uk0z22fbhyEr4bUxxPsbJGYE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tkyRntQ09ePCxVeD3S+9ui43uvE=
+		VZ0JWOsIpVWqmbRvOt/oSWyeu84=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		d19vQBwCRfh+T1HYH8jMQz0FLnQ=
+		bBdP3Rl9fKYh6/XdxYaWCKBWkEU=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		0x/laTLes3bQ8sRnN6eGdPrVpPY=
+		S9g/77a+ZXVgCytXYW35FhtmmT0=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		RzLkSy1+ASQZEMOrdQS8LKKbBdY=
+		FIpbF4WeIJB0+Qvb9JldWXjFY14=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		d19vQBwCRfh+T1HYH8jMQz0FLnQ=
+		bBdP3Rl9fKYh6/XdxYaWCKBWkEU=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		0x/laTLes3bQ8sRnN6eGdPrVpPY=
+		S9g/77a+ZXVgCytXYW35FhtmmT0=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		RzLkSy1+ASQZEMOrdQS8LKKbBdY=
+		FIpbF4WeIJB0+Qvb9JldWXjFY14=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		27xECBW4kY4lmd2/Wzartjhho9Y=
 		</data>
+		<key>PoseEstimationCaptureView.nib</key>
+		<data>
+		sRYgUzLMHeqO5nzhnlDnov3C/KE=
+		</data>
 		<key>SelfieCaptureView.nib</key>
 		<data>
-		witQQISTxhG0XnFBIH6+Lq0u4E4=
+		K1baJhulfKmEUUGXPXBZ93UK9O8=
 		</data>
 		<key>SignatureVC.nib</key>
 		<data>
-		xndbFk/z2ZEhRVaUhVIYTDVaj7o=
+		OzC1lsQLwt8/clMrP/QYgtADAc8=
 		</data>
 		<key>Turkish_ID.pem</key>
 		<data>
@@ -79,21 +83,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FETp9kavHVbQ9q2gXdhzBRzDbiTisY3FAf/R26liE6I=
+			IqrRp+vn79q3ZzaWsbtmOaCPn4PrDUCmXqUNN/HDc30=
 			</data>
 		</dict>
 		<key>AutoSelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lZxYBSA5BaJrzrQ6F6GeEUFJUh4YiOWoosjIIknK3Bw=
+			o9xWsoqUafBbK7kzITwBC8X4Y2eE7cMpMvHgQiqn+zo=
 			</data>
 		</dict>
 		<key>DocumentVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gpdVsrgoDBmiWYc/vqRaXxYeHfVrvBQJy4mNbpTYX/E=
+			kmCaExdXn0fRUly5eZix4hzRSvBIxKiOK+bxufghOBc=
 			</data>
 		</dict>
 		<key>Headers/Amani.h</key>
@@ -114,49 +118,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qMIIWyy0wUAvy2jgHidDSCj5DaTQQ3Iqv3s3iQ8M4jA=
+			eprFOVYoKyQsnNGkP1m1y2bLHRkcio7iqKwsiQJduWE=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QO0HMfhcdaeNCf3IsO8UoxRUA2L2QvoPkI7xXjNT5rA=
+			fCTZHSn0+D9MOGmFTFxR32xSAoEw+HimgZ8A8O+mcRw=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qgq2O2XAA5RY/ZtXLNzqja7zFLLd36j10Vgwy1WWwQw=
+			Q1qchgWdqrcQlZPTcci7jRlpfCEMEZlSY1XqcpDEHnY=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bWeDvyjEj+h1DH6Cdl+j/U3BZplF70TD4ic3bBnDP/g=
+			41N/Q37yBdi+H7ryb7ILPunyWDxVQlMHqXL+YztZJ2s=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QO0HMfhcdaeNCf3IsO8UoxRUA2L2QvoPkI7xXjNT5rA=
+			fCTZHSn0+D9MOGmFTFxR32xSAoEw+HimgZ8A8O+mcRw=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qgq2O2XAA5RY/ZtXLNzqja7zFLLd36j10Vgwy1WWwQw=
+			Q1qchgWdqrcQlZPTcci7jRlpfCEMEZlSY1XqcpDEHnY=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bWeDvyjEj+h1DH6Cdl+j/U3BZplF70TD4ic3bBnDP/g=
+			41N/Q37yBdi+H7ryb7ILPunyWDxVQlMHqXL+YztZJ2s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -166,18 +170,25 @@
 			KWCCHRJzGMNDanfMCsFHs6nyca5oLNrRE7qdpkuSA5c=
 			</data>
 		</dict>
+		<key>PoseEstimationCaptureView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3hAJzmCkDsbu6mKk1bXB57ZH11CY+FPIbvgdWqQp9OA=
+			</data>
+		</dict>
 		<key>SelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xPFvFDiwYpCXqdMGpEIViZrtY4pPYtis0d2gBcAU9h4=
+			DpQHI7LigFIuyqFkJbFfoqnkavNNpoets0M43kbCBIo=
 			</data>
 		</dict>
 		<key>SignatureVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XgxcSsCx3/yAhus4W6PfNGrY2IUy12+n6uUteDATaJw=
+			X6YH0eq0e1RqLNHoeda+reZk5clek7aGUJ4QLPqK2t4=
 			</data>
 		</dict>
 		<key>Turkish_ID.pem</key>

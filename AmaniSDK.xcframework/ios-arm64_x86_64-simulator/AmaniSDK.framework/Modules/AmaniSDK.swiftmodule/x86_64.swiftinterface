@@ -420,6 +420,18 @@ public struct NviModel : Swift.Codable {
   public func upload(location: CoreLocation.CLLocation? = nil, completion: @escaping (Swift.Bool?, [AmaniSDK.AmaniError]?) -> Swift.Void)
   @objc deinit
 }
+public enum poseState : Swift.String {
+  case faceTooBig
+  case faceTooSmall
+  case faceIsOk
+  case notInArea
+  case completed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class CardAccess {
   public var securityInfos: [AmaniSDK.SecurityInfo] {
@@ -819,6 +831,16 @@ public class ScanNFC {
   public func blurCheck(image: CoreGraphics.CGImage, blurVariance: Swift.Int = 5) -> Swift.Bool
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class PoseEstimation {
+  public static let sharedInstance: AmaniSDK.AutoSelfie
+  public func setType(type: Swift.String)
+  public func setManualCropTimeout(Timeout: Swift.Int)
+  public func setInfoMessages(infoMessages: [AmaniSDK.infoState : Swift.String])
+  public func setScreenConfig(screenConfig: [AmaniSDK.configState : Swift.String])
+  public func start(stepId: Swift.Int = steps.front.rawValue, completion: @escaping (UIKit.UIImage) -> Swift.Void) throws -> UIKit.UIView?
+  public func upload(location: CoreLocation.CLLocation? = nil, completion: @escaping (Swift.Bool?, [AmaniSDK.AmaniError]?) -> Swift.Void)
+  @objc deinit
+}
 public struct AmaniError : Swift.Codable {
   public var error_code: Swift.Int!
   public var error_message: Swift.String?
@@ -1065,6 +1087,9 @@ extension AmaniSDK.infoState : Swift.RawRepresentable {}
 extension AmaniSDK.configState : Swift.Equatable {}
 extension AmaniSDK.configState : Swift.Hashable {}
 extension AmaniSDK.configState : Swift.RawRepresentable {}
+extension AmaniSDK.poseState : Swift.Equatable {}
+extension AmaniSDK.poseState : Swift.Hashable {}
+extension AmaniSDK.poseState : Swift.RawRepresentable {}
 @available(iOS 13, macOS 10.15, *)
 extension AmaniSDK.DocTypeEnum : Swift.Equatable {}
 @available(iOS 13, macOS 10.15, *)
