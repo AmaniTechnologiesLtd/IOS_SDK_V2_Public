@@ -10,11 +10,11 @@
 		</data>
 		<key>AutoSelfieCaptureView.nib</key>
 		<data>
-		uehDMPB/491beJQ29vhggt3KkQU=
+		JbsEQHHn7F6rnRN912oWpgJlQ+A=
 		</data>
 		<key>DocumentVC.nib</key>
 		<data>
-		qKcXncQAvCJ0B81AaO9FioAifhs=
+		Oh9WYJmL4wgLGZjMJSwFJMXiDuo=
 		</data>
 		<key>Headers/Amani.h</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>IDCaptureView.nib</key>
 		<data>
-		0h9rszHrGVLbaUfT+IZXZ6dCZlo=
+		bNZN0CHSvJ+J9IqD/A2wjv5Aqm8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Pz6RKoEimjn9bPC5FQe+2xMQ5Xk=
+		EPkiKsj1M2VJYaG29Lpw0qWxVmE=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iUwCfTcvDx7fF3lBNaEb6bn3s4o=
+		3gAiS/e4wzmg+cpe1hFOpxbK1dA=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		iUwCfTcvDx7fF3lBNaEb6bn3s4o=
+		3gAiS/e4wzmg+cpe1hFOpxbK1dA=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/tY/VN+7jXCF8UaHB/IodowK4Dc=
+		RzTdgOrJfqoS0giBs438OcigGh8=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		/tY/VN+7jXCF8UaHB/IodowK4Dc=
+		RzTdgOrJfqoS0giBs438OcigGh8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,15 +86,15 @@
 		</data>
 		<key>PoseEstimationCaptureView.nib</key>
 		<data>
-		hTTdQ3GkeP/iLcjKOhvCMKg1NJo=
+		f/S0KJpg/lvpuqLWSO0965+q1ko=
 		</data>
 		<key>SelfieCaptureView.nib</key>
 		<data>
-		McpKwxzVH7LTf5RBxsVnTglmdR4=
+		vPk5y3h+cYEum/0IZcTLky/yRGU=
 		</data>
 		<key>SignatureVC.nib</key>
 		<data>
-		AsLdrUrZuyLumvohKWyCYYIui40=
+		6CFuUWVvDSbTClvTrKy/DtorbvU=
 		</data>
 		<key>Turkish_ID.pem</key>
 		<data>
@@ -114,14 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KgBxo4UD7DdqCdnpI9aSjUIQl5FvVkhHzR185HWsLuo=
+			s4trMo2W7cevmZTWGWSd1ACk+H4Y8m67ATlsl9Rf5ls=
 			</data>
 		</dict>
 		<key>DocumentVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XhUYS447kDb7HBu7LbClBSGdPYAEmukJH6L6hCqZtxk=
+			STw81D4++X9WsyTYBtcVyOH18sSum7eR1iJ+NJgDnMs=
 			</data>
 		</dict>
 		<key>Headers/Amani.h</key>
@@ -142,7 +142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iA0CzfvoFGT0KP5QWc6+OFoZmZIVSRVZ8XRT4cThOMU=
+			yrJ4vI6VGLRDiewHK0X1poPjaqD+nedyyQcPbedyfVc=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LhpMCWI00t5ExKlewXXIBO4qN3VFQODU0rFcT4vYF8w=
+			c9tgR709If72RCx3F6+ayuBu9ROpVWhF19gTZPtHmp4=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LhpMCWI00t5ExKlewXXIBO4qN3VFQODU0rFcT4vYF8w=
+			c9tgR709If72RCx3F6+ayuBu9ROpVWhF19gTZPtHmp4=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -205,7 +205,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yxc69ffcsSWKwYSEen7VKa4eWwh6O99zOl5rHc+UCeM=
+			Be/bZi+/5O/6HovMtUSGV9fq7zWsAYFdgFrZaS3xAS0=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -226,7 +226,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yxc69ffcsSWKwYSEen7VKa4eWwh6O99zOl5rHc+UCeM=
+			Be/bZi+/5O/6HovMtUSGV9fq7zWsAYFdgFrZaS3xAS0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -240,21 +240,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qcCBntS871Rc2+wr/5JWSelgcNUbNTO387Po92Xl/Hk=
+			oCDhR4UveoHZaeVXZVmGNEgIINHKWr69R7w0FPAYWCM=
 			</data>
 		</dict>
 		<key>SelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5wjiLqKTTGOoK2Nbl8WrAIB9EfAddLLAX60X02anneA=
+			3kBBsunAPPPRbCZZuvtd3mTFEGDJ3dG8MGukYfAddtw=
 			</data>
 		</dict>
 		<key>SignatureVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8kSYnO9TDVPEvc2gpyH2eRfu7GnjmJGgiNnyfhbNQA0=
+			ccrcT+4rfVWsHx3d8i98NO9f/rinHIwRfcxz0KgLACk=
 			</data>
 		</dict>
 		<key>Turkish_ID.pem</key>
