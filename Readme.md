@@ -98,8 +98,20 @@ For Camera:
 ### Grant accesss to NFC
 Enable the Near Field Communication Tag Reading capability in the target Signing & Capabilities. 
 
-
 ## Integration
+
+For not NFC supported device (like iPhone 6) there is no CoreNFC library in system and also we are using some ios crypto libraries for reading nfc data supported after iOS 13.
+You need to add below listed libraries as optional under Build Phases->Link Binary With Libraries menu.
+```
+CoreNFC.framework
+```
+
+```
+CryptoTokenKit.framework
+```
+```
+CryptoKit.framework
+```
 
 ### Example Usage
 
