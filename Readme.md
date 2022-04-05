@@ -358,6 +358,38 @@ If you want to upload from another screen like in our example you need to define
             // if status is false in error as AmaniError returns error code and description in an array.
         }
 ```
+##### Video Call
+
+
+you need to add delegate method for detecting end of video call
+
+add SFSafariViewControllerDelegate protocol to ViewController 
+
+```swift
+
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        guard let completion = AmaniUI.sharedInstance.completion else { return }
+        completion(AmaniUI.sharedInstance.customerID!)
+        DispatchQueue.main.async {
+            self.navigationController?.isNavigationBarHidden = false
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+```
+
+
+```swift
+              do{
+                  let sfView:SFSafariViewController = try  self.amani.videoCall().start() as! SFSafariViewController
+                  sfView.delegate = self //detecting finished video call
+                  DispatchQueue.main.async {
+                      self.navigationController?.isNavigationBarHidden = true
+                    self.navigationController?.pushViewController(sfView, animated: false)
+                  }
+              } catch {
+                  
+              }
+```
 
 # Installation
 
