@@ -14,3 +14,7 @@ var email:String?
 var DocNumber:String?
 var BirthDate:String?
 var ExpDate:String?
+var City: String?
+var Province: String?
+var Adres: String?
+var Occupation: String?

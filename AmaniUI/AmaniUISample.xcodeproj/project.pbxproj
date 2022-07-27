@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4830904328900A3800B75529 /* AmaniSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4830904228900A3800B75529 /* AmaniSDK.xcframework */; };
+		4830904428900A3800B75529 /* AmaniSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4830904228900A3800B75529 /* AmaniSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4830904528900A4500B75529 /* AmaniSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4830904228900A3800B75529 /* AmaniSDK.xcframework */; };
 		484055EA27AAA97800025328 /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484055E827AAA97800025328 /* OpenSSL.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		484055EB27AABFD500025328 /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484055E827AAA97800025328 /* OpenSSL.xcframework */; };
 		484055EC27AABFD500025328 /* OpenSSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 484055E827AAA97800025328 /* OpenSSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -90,10 +93,6 @@
 		489D41BE26BBEDFE0009AB39 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D418026BBEDFE0009AB39 /* Resources.swift */; };
 		48B1979A26F9D287009D0DAD /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1979926F9D287009D0DAD /* infoViewController.swift */; };
 		48B1979C26F9D5A4009D0DAD /* shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1979B26F9D5A4009D0DAD /* shared.swift */; };
-		48B4721827B14C4C0089D42E /* AmaniSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B4721527B14B150089D42E /* AmaniSDK.xcframework */; };
-		48B4721927B14C4C0089D42E /* AmaniSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48B4721527B14B150089D42E /* AmaniSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48B4721B27B14C530089D42E /* AmaniSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B4721527B14B150089D42E /* AmaniSDK.xcframework */; };
-		48B4721C27B14C530089D42E /* AmaniSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48B4721527B14B150089D42E /* AmaniSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48B4721D27B14C590089D42E /* Lottie.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B4720E27B147870089D42E /* Lottie.xcframework */; };
 		48B4721E27B14C590089D42E /* Lottie.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48B4720E27B147870089D42E /* Lottie.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48B4721F27B14C5A0089D42E /* JGProgressHUD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B4720F27B147870089D42E /* JGProgressHUD.xcframework */; };
@@ -126,9 +125,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4830904428900A3800B75529 /* AmaniSDK.xcframework in Embed Frameworks */,
 				48B4722227B14C5C0089D42E /* IQKeyboardManagerSwift.xcframework in Embed Frameworks */,
 				48B4722B27B14CD00089D42E /* IQKeyboardManager.xcframework in Embed Frameworks */,
-				48B4721C27B14C530089D42E /* AmaniSDK.xcframework in Embed Frameworks */,
 				484055EC27AABFD500025328 /* OpenSSL.xcframework in Embed Frameworks */,
 				48B4721E27B14C590089D42E /* Lottie.xcframework in Embed Frameworks */,
 				48B4722027B14C5A0089D42E /* JGProgressHUD.xcframework in Embed Frameworks */,
@@ -137,20 +136,10 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48B4721A27B14C4C0089D42E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				48B4721927B14C4C0089D42E /* AmaniSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4830904228900A3800B75529 /* AmaniSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AmaniSDK.xcframework; path = Carthage/Build/AmaniSDK.xcframework; sourceTree = SOURCE_ROOT; };
 		484055E827AAA97800025328 /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OpenSSL.xcframework; sourceTree = "<group>"; };
 		484055F327AABFEE00025328 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 		484055F527AABFFC00025328 /* CryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoKit.framework; path = System/Library/Frameworks/CryptoKit.framework; sourceTree = SDKROOT; };
@@ -235,11 +224,9 @@
 		489D418026BBEDFE0009AB39 /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		48B1979926F9D287009D0DAD /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		48B1979B26F9D5A4009D0DAD /* shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shared.swift; sourceTree = "<group>"; };
-		48B4720D27B147870089D42E /* Amani.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Amani.xcframework; path = Carthage/Build/Amani.xcframework; sourceTree = SOURCE_ROOT; };
 		48B4720E27B147870089D42E /* Lottie.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Lottie.xcframework; path = Carthage/Build/Lottie.xcframework; sourceTree = SOURCE_ROOT; };
 		48B4720F27B147870089D42E /* JGProgressHUD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JGProgressHUD.xcframework; path = Carthage/Build/JGProgressHUD.xcframework; sourceTree = SOURCE_ROOT; };
 		48B4721027B147870089D42E /* IQKeyboardManagerSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IQKeyboardManagerSwift.xcframework; path = Carthage/Build/IQKeyboardManagerSwift.xcframework; sourceTree = SOURCE_ROOT; };
-		48B4721527B14B150089D42E /* AmaniSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AmaniSDK.xcframework; path = Carthage/Build/AmaniSDK.xcframework; sourceTree = SOURCE_ROOT; };
 		48B4722927B14CD00089D42E /* IQKeyboardManager.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IQKeyboardManager.xcframework; path = Carthage/Build/IQKeyboardManager.xcframework; sourceTree = SOURCE_ROOT; };
 		48C3312726F9DD5C005F9E6A /* SelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
 		48C3312826F9DD5C005F9E6A /* SelfieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfieViewController.xib; sourceTree = "<group>"; };
@@ -250,12 +237,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B4721B27B14C530089D42E /* AmaniSDK.xcframework in Frameworks */,
 				484055F727AABFFC00025328 /* CryptoKit.framework in Frameworks */,
 				484055F827AABFFC00025328 /* CryptoTokenKit.framework in Frameworks */,
 				48B4722127B14C5C0089D42E /* IQKeyboardManagerSwift.xcframework in Frameworks */,
 				484055F427AABFEE00025328 /* CoreNFC.framework in Frameworks */,
 				484055EB27AABFD500025328 /* OpenSSL.xcframework in Frameworks */,
+				4830904328900A3800B75529 /* AmaniSDK.xcframework in Frameworks */,
 				48B4722A27B14CD00089D42E /* IQKeyboardManager.xcframework in Frameworks */,
 				48B4721F27B14C5A0089D42E /* JGProgressHUD.xcframework in Frameworks */,
 				489D409E26BBE6740009AB39 /* AmaniUI.framework in Frameworks */,
@@ -268,9 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48B4722327B14C8D0089D42E /* IQKeyboardManagerSwift.xcframework in Frameworks */,
-				48B4721827B14C4C0089D42E /* AmaniSDK.xcframework in Frameworks */,
 				48B4722727B14C8E0089D42E /* Lottie.xcframework in Frameworks */,
 				484055FE27AAC01900025328 /* CoreNFC.framework in Frameworks */,
+				4830904528900A4500B75529 /* AmaniSDK.xcframework in Frameworks */,
 				484055FB27AAC00D00025328 /* CryptoKit.framework in Frameworks */,
 				48B4722527B14C8D0089D42E /* JGProgressHUD.xcframework in Frameworks */,
 				484055FC27AAC00D00025328 /* CryptoTokenKit.framework in Frameworks */,
@@ -514,9 +501,8 @@
 		489D41C526BC04F80009AB39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4830904228900A3800B75529 /* AmaniSDK.xcframework */,
 				48B4722927B14CD00089D42E /* IQKeyboardManager.xcframework */,
-				48B4721527B14B150089D42E /* AmaniSDK.xcframework */,
-				48B4720D27B147870089D42E /* Amani.xcframework */,
 				48B4721027B147870089D42E /* IQKeyboardManagerSwift.xcframework */,
 				48B4720F27B147870089D42E /* JGProgressHUD.xcframework */,
 				48B4720E27B147870089D42E /* Lottie.xcframework */,
@@ -572,7 +558,6 @@
 				489D408526BBE6740009AB39 /* Sources */,
 				489D408626BBE6740009AB39 /* Frameworks */,
 				489D408726BBE6740009AB39 /* Resources */,
-				48B4721A27B14C4C0089D42E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -878,8 +863,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AmaniUISample/AmaniUISample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 24V9HW64Y3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AmaniUISample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -888,6 +875,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ai.amani.AmaniUISample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -900,8 +888,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AmaniUISample/AmaniUISample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 24V9HW64Y3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AmaniUISample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -910,6 +900,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ai.amani.AmaniUISample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -919,13 +910,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 24V9HW64Y3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = AmaniUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -949,13 +942,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 24V9HW64Y3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = AmaniUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

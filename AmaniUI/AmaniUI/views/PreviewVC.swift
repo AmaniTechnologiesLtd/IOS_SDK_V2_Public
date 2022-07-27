@@ -8,6 +8,7 @@
 import AmaniSDK
 import JGProgressHUD
 import UIKit
+import SafariServices
 
 class PreviewVC: ViewControllerBase {
 
@@ -58,11 +59,17 @@ class PreviewVC: ViewControllerBase {
         selfie.upload(location: nil) { result, error in
           guard let result = result else { return }
           if result {
-            guard let completion = AmaniUI.sharedInstance.completion else { return }
-            completion(AmaniUI.sharedInstance.customerID!)
-            DispatchQueue.main.async {
-              self.navigationController?.popToRootViewController(animated: true)
-            }
+              do{
+                  let sfView:SFSafariViewController = try  self.amani.videoCall().start() as! SFSafariViewController
+                  sfView.delegate = self
+                  DispatchQueue.main.async {
+                      self.navigationController?.isNavigationBarHidden = true
+                    self.navigationController?.pushViewController(sfView, animated: false)
+                  }
+              } catch {
+                  
+              }
+
 
           } else {
             print(result)
@@ -100,6 +107,8 @@ class PreviewVC: ViewControllerBase {
           idCapture.upload(location: nil) { result, error in
             guard let result = result else { return }
             print(result)
+              DispatchQueue.main.async {
+
             if result {
               let initilVC = SelfieViewController(
                 nibName: String(describing: SelfieViewController.self),
@@ -111,7 +120,6 @@ class PreviewVC: ViewControllerBase {
               }
             } else {
               print(result)
-              DispatchQueue.main.async {
                 self.showError(
                   title: Resources.KimlikOnayErrorTitle, info: Resources.KimlikOnayErrorMessage)
               }
@@ -127,7 +135,7 @@ class PreviewVC: ViewControllerBase {
       }
 
     } catch {
-
+        
     }
   }
   func startAnimation() {
@@ -153,7 +161,7 @@ class PreviewVC: ViewControllerBase {
     //            let dashboardVC = self.navigationController!.viewControllers.filter { $0 is KuryeCagirVC }.first!
     //            self.navigationController!.popToViewController(dashboardVC, animated: true)
     case documentTypes.TurkishIdNew.rawValue:
-      let dashboardVC = self.navigationController!.viewControllers.filter { $0 is KuryeCagirVC }
+      let dashboardVC = self.navigationController!.viewControllers.filter { $0 is AnimationVC }
         .first!
       self.navigationController!.popToViewController(dashboardVC, animated: true)
 
@@ -179,4 +187,16 @@ class PreviewVC: ViewControllerBase {
     effectView.isHidden = false
     errorView.isHidden = false
   }
+}
+extension PreviewVC:SFSafariViewControllerDelegate{
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        guard let completion = AmaniUI.sharedInstance.completion else { return }
+        completion(AmaniUI.sharedInstance.customerID!)
+        DispatchQueue.main.async {
+            self.navigationController?.isNavigationBarHidden = false
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+
 }

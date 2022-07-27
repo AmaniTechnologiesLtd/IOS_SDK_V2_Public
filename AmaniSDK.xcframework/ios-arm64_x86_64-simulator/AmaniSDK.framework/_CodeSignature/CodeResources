@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		LQq0As2D5xxT1aGLasqqwES8R+o=
+		SbHKzF+PbkAki29u14CISYWQEPc=
 		</data>
 		<key>AutoSelfieCaptureView.nib</key>
 		<data>
-		JbsEQHHn7F6rnRN912oWpgJlQ+A=
+		xA7vdB5D6MFCouf6EU0M6SMQuVM=
 		</data>
 		<key>DocumentVC.nib</key>
 		<data>
-		Oh9WYJmL4wgLGZjMJSwFJMXiDuo=
+		p0HYOnnyI4DVcZHpyIYNFdfsxk0=
 		</data>
 		<key>Headers/Amani.h</key>
 		<data>
@@ -22,63 +22,63 @@
 		</data>
 		<key>Headers/AmaniSDK-Swift.h</key>
 		<data>
-		T+QZbywQpcRg5qbPOaKJdW7ZcUM=
+		oD3pnCxza1OxjaX/is2fQrdPfOw=
 		</data>
 		<key>IDCaptureView.nib</key>
 		<data>
-		bNZN0CHSvJ+J9IqD/A2wjv5Aqm8=
+		F2QT/oTRFEd3SFQzpPPnkRS3oUY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EPkiKsj1M2VJYaG29Lpw0qWxVmE=
+		Zy5bsbU55SWBhDFJv4tdEzsImKw=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		3YQu6dgsoALSEZCSJfaabGLAmCU=
+		O1rDIEQNPWwBiIXT94XhOmgqhuE=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HmdqG24JAx5yvBJPxNBXRlCCOp8=
+		In7bW5HswVqAv8NudO7YHbRVFbI=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3gAiS/e4wzmg+cpe1hFOpxbK1dA=
+		5Vc9dThhH+WYu7fIZMXUMWFmCkA=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		3YQu6dgsoALSEZCSJfaabGLAmCU=
+		O1rDIEQNPWwBiIXT94XhOmgqhuE=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		HmdqG24JAx5yvBJPxNBXRlCCOp8=
+		In7bW5HswVqAv8NudO7YHbRVFbI=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		3gAiS/e4wzmg+cpe1hFOpxbK1dA=
+		5Vc9dThhH+WYu7fIZMXUMWFmCkA=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		k0q+XIO5lga4ewJoiHEZyeg9PLY=
+		yxqTsTTgC33OuAFs4RNUZx3be54=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		C60RLqExX0IK7xUTmtiYWw/VbpE=
+		esF2Rjcr7rGpYh9hdWkUWbMpDBo=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RzTdgOrJfqoS0giBs438OcigGh8=
+		jtLt0sWeZel9RP2VmC9gWl14XLc=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		k0q+XIO5lga4ewJoiHEZyeg9PLY=
+		yxqTsTTgC33OuAFs4RNUZx3be54=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		C60RLqExX0IK7xUTmtiYWw/VbpE=
+		esF2Rjcr7rGpYh9hdWkUWbMpDBo=
 		</data>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		RzTdgOrJfqoS0giBs438OcigGh8=
+		jtLt0sWeZel9RP2VmC9gWl14XLc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,19 +86,23 @@
 		</data>
 		<key>PoseEstimationCaptureView.nib</key>
 		<data>
-		f/S0KJpg/lvpuqLWSO0965+q1ko=
+		YVC7HcWkWKe0d14Qdl25+jGpSLs=
 		</data>
 		<key>SelfieCaptureView.nib</key>
 		<data>
-		vPk5y3h+cYEum/0IZcTLky/yRGU=
+		JQUJZKpMgRMgkFN9cLFRPKQ0iS0=
 		</data>
 		<key>SignatureVC.nib</key>
 		<data>
-		6CFuUWVvDSbTClvTrKy/DtorbvU=
+		SJFKPYADC3bP9u4VqgRnV+0WoWs=
 		</data>
 		<key>Turkish_ID.pem</key>
 		<data>
 		K0UtOSggzXa9XvEttBS6a0mPmhg=
+		</data>
+		<key>VideoCallView.nib</key>
+		<data>
+		g6bY6HM+BB8NbGMKm1ZzB1k8Uxs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -107,21 +111,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IqrRp+vn79q3ZzaWsbtmOaCPn4PrDUCmXqUNN/HDc30=
+			eJ3KrbZ3sFvbrm4gZ3KZd7/YJkPOBpgVYfg9bUm6Vjk=
 			</data>
 		</dict>
 		<key>AutoSelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s4trMo2W7cevmZTWGWSd1ACk+H4Y8m67ATlsl9Rf5ls=
+			H43YS9hyp3YMLv5DWZDF4VxciipRdKQCc2oSSgL6BQU=
 			</data>
 		</dict>
 		<key>DocumentVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			STw81D4++X9WsyTYBtcVyOH18sSum7eR1iJ+NJgDnMs=
+			TdzfSYhHtLukzlOPz0yH5oA9VrFIJlQL0MToRl9EPzQ=
 			</data>
 		</dict>
 		<key>Headers/Amani.h</key>
@@ -135,98 +139,98 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0P1EVIIHVR2tBBeaAcef+HEHuUis5uBxRVc2j74CwnY=
+			rfpUc5BiM2B800R+CVQiNQm/VFGIsXKYb/he1PlIgBo=
 			</data>
 		</dict>
 		<key>IDCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yrJ4vI6VGLRDiewHK0X1poPjaqD+nedyyQcPbedyfVc=
+			bjWeDz5hQxiW6eOm2Dp6aQoY4flb/L0j2uDZiYShGtM=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7bwRKwPMTE85xZD3ZzTwc17ObY4dBbxE2OkyxsVkyzY=
+			fZzxpUNrCoQNJyXkTpZ3P6moyDNAeGXU3Qxh+wD4pvE=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XmI3opoYFS8VYeX8ZZ6kBOJsXNf3vjCi5XBT5IFtYX4=
+			fGWh1Dx6/6cYX5CDLTRPAfjKOyZBvmuXLDXNLIZvfJs=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c9tgR709If72RCx3F6+ayuBu9ROpVWhF19gTZPtHmp4=
+			H96osiUyqpEHzPXbu9jusgkUrqLpAiIJG1AFvMhCCDs=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7bwRKwPMTE85xZD3ZzTwc17ObY4dBbxE2OkyxsVkyzY=
+			fZzxpUNrCoQNJyXkTpZ3P6moyDNAeGXU3Qxh+wD4pvE=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XmI3opoYFS8VYeX8ZZ6kBOJsXNf3vjCi5XBT5IFtYX4=
+			fGWh1Dx6/6cYX5CDLTRPAfjKOyZBvmuXLDXNLIZvfJs=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c9tgR709If72RCx3F6+ayuBu9ROpVWhF19gTZPtHmp4=
+			H96osiUyqpEHzPXbu9jusgkUrqLpAiIJG1AFvMhCCDs=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X3QCDP8jT6SZRARWY9ddl/YjqBPOvlnpDt4gxSjICM4=
+			IPAG/RHkb/eOKHQSbb0xTWyku7TakUrXuhAgaq9B82Y=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9PBJL3kXOS3FPvq+8RRTxRKQFQD1wv1JD1xtxDuTm2Q=
+			XlnCo5wZj01+i+2I+Aakg5RGkQU4S5BK8A3b8Ewgd4M=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Be/bZi+/5O/6HovMtUSGV9fq7zWsAYFdgFrZaS3xAS0=
+			+IyqE3IZhBHYl4cdN6oHOEpAHwHE0I1xiABza6/Qeh4=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X3QCDP8jT6SZRARWY9ddl/YjqBPOvlnpDt4gxSjICM4=
+			IPAG/RHkb/eOKHQSbb0xTWyku7TakUrXuhAgaq9B82Y=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9PBJL3kXOS3FPvq+8RRTxRKQFQD1wv1JD1xtxDuTm2Q=
+			XlnCo5wZj01+i+2I+Aakg5RGkQU4S5BK8A3b8Ewgd4M=
 			</data>
 		</dict>
 		<key>Modules/AmaniSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Be/bZi+/5O/6HovMtUSGV9fq7zWsAYFdgFrZaS3xAS0=
+			+IyqE3IZhBHYl4cdN6oHOEpAHwHE0I1xiABza6/Qeh4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -240,21 +244,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oCDhR4UveoHZaeVXZVmGNEgIINHKWr69R7w0FPAYWCM=
+			T+5coYhUp3HlhkLrPCUeDtVSFdZLWiWF59LbiR0lr44=
 			</data>
 		</dict>
 		<key>SelfieCaptureView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3kBBsunAPPPRbCZZuvtd3mTFEGDJ3dG8MGukYfAddtw=
+			uGehyNDVx8pMC0d3zXoOPmuG+cC3Y+jGNMfP3NiWXMw=
 			</data>
 		</dict>
 		<key>SignatureVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ccrcT+4rfVWsHx3d8i98NO9f/rinHIwRfcxz0KgLACk=
+			Dv3DzV9OBVwyu3n0xpuqtZuXolN5XgE1t/Ba4ehyErc=
 			</data>
 		</dict>
 		<key>Turkish_ID.pem</key>
@@ -262,6 +266,13 @@
 			<key>hash2</key>
 			<data>
 			XV0x9hnEdV9ZY94ivPIwtdhzQuGw9WY6Ord6LyFhp5A=
+			</data>
+		</dict>
+		<key>VideoCallView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YyzZJ47TbR/N00GHL05pwqhqVf1vVXr5n1pMhp7PVoY=
 			</data>
 		</dict>
 	</dict>

@@ -23,6 +23,13 @@ class PersonalInfoViewController: ViewControllerBase {
     let maxAttempt:Int = 3
     let activityIndicator = JGProgressHUD()
 
+    fileprivate func updateAdress(customerInfo:[String]) {
+        self.amani.customerInfo().setInfo(occupation: customerInfo[0], address: AddressInfo(city: customerInfo[3], address: customerInfo[1], province: customerInfo[2]))
+        self.amani.customerInfo().upload(location: nil, completion: { adressupdate, errors in
+            print("Adress Updated")
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Resources.KimlikTaramaTitle
@@ -46,6 +53,10 @@ class PersonalInfoViewController: ViewControllerBase {
                 }
                 guard let cmModel:CustomerResponseModel = cmModel else {return}
                 AmaniUI.sharedInstance.customerID = String(cmModel.id!)
+                let customerInfo = AmaniUI.sharedInstance.customerInfo
+
+                self.updateAdress(customerInfo: customerInfo)
+
                 print(cmModel.id)
             }
         } else {
@@ -57,6 +68,9 @@ class PersonalInfoViewController: ViewControllerBase {
                 print("password cannot be nil")
                 return  }
             amani.initAmani(server: AmaniUI.sharedInstance.server, userName: username, password: password, customer: AmaniUI.sharedInstance.customer!,useGeoLocation: false) { (cmModel, error) in
+                DispatchQueue.main.async {
+                    
+                
                 if let error:NetworkError = error {
                     guard let notOk = AmaniUI.sharedInstance.notOk else { return }
                     notOk("login Error")
@@ -64,7 +78,11 @@ class PersonalInfoViewController: ViewControllerBase {
                 }
                 guard let cmModel:CustomerResponseModel = cmModel else {return}
                 AmaniUI.sharedInstance.customerID = String(cmModel.id!)
+                    let customerInfo = AmaniUI.sharedInstance.customerInfo
+
+                    self.updateAdress(customerInfo: customerInfo)
                 print(cmModel.id)
+                }
             }
         }
     }
@@ -76,8 +94,16 @@ class PersonalInfoViewController: ViewControllerBase {
     }
     
     @IBAction func btnContinueToID(_ sender: Any) {
-        let initilVC = KuryeCagirVC(nibName:String(describing: KuryeCagirVC.self),bundle:Bundle(for: KuryeCagirVC.self))
-        self.navigationController?.pushViewController(initilVC, animated: true)
+        
+//        let initilVC = KuryeCagirVC(nibName:String(describing: KuryeCagirVC.self),bundle:Bundle(for: KuryeCagirVC.self))
+//        self.navigationController?.pushViewController(initilVC, animated: true)
+        
+        let initilVC = AnimationVC(nibName: String(describing: AnimationVC.self), bundle: Bundle(for: AnimationVC.self))
+        initilVC.side = steps.front.rawValue
+        initilVC.title = Resources.KimlikTaramaTitle
+        //        initilVC.callback = startIdCapture
+        self.navigationController?.pushViewController(initilVC, animated: false)
+    
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
@@ -89,7 +115,7 @@ class PersonalInfoViewController: ViewControllerBase {
                     return
 
                 }
-                amani.scanNFC().setType(type: documentTypes.TurkishIdNew.rawValue)
+                amani.scanNFC().setType(type: documentTypes.NFCDocument.rawValue)
                 if (attempt < maxAttempt){
                     try amani.scanNFC().start(nviData: nvi ) { (req,error) in
                         if let req:NFCRequest = req  {
@@ -99,16 +125,21 @@ class PersonalInfoViewController: ViewControllerBase {
                             self.amani.scanNFC().upload(location: nil) { (result, err) in
                                 DispatchQueue.main.async {
                                     self.activityIndicator.dismiss()
-                                }
+                                
                                 if (result!) {
-                                    let initilVC = SelfieViewController(nibName: String(describing: SelfieViewController.self), bundle: Bundle(for: SelfieViewController.self))
+                                    let initilVC = AnimationVC(nibName: String(describing: AnimationVC.self), bundle: Bundle(for: AnimationVC.self))
+                                    initilVC.side = steps.front.rawValue
                                     initilVC.title = Resources.KimlikTaramaTitle
                                     //        initilVC.callback = startIdCapture
                                     self.navigationController?.pushViewController(initilVC, animated: false)
+//                                    let initilVC = SelfieViewController(nibName: String(describing: SelfieViewController.self), bundle: Bundle(for: SelfieViewController.self))
+//                                    initilVC.title = Resources.KimlikTaramaTitle
+//                                    //        initilVC.callback = startIdCapture
+//                                    self.navigationController?.pushViewController(initilVC, animated: false)
                                 } else {
-                                    DispatchQueue.main.async {
                                         self.showError(title: Resources.KimlikTaramaNFCErrorTitle, info: Resources.KimlikTaramaNFCErrorMessage)
-                                    }
+                                    
+                                }
                                 }
                             }
                         } else {

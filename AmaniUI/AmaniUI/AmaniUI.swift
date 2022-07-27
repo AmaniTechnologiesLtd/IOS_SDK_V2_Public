@@ -25,6 +25,7 @@ public final class AmaniUI: NSObject {
     public var username:String?
     public var password:String?
     public var customer: CustomerRequestModel?
+    public var customerInfo: [String] = []
 
     
     
@@ -47,7 +48,7 @@ public final class AmaniUI: NSObject {
     
     
     
-    public func start(parentVC:UIViewController,server:String,token:String,customer:CustomerRequestModel, nviData:NviModel ,completion: @escaping (String) -> Void, notOk:@escaping (String)->Void ) {
+    public func start(parentVC:UIViewController,server:String,token:String,customer:CustomerRequestModel, nviData:NviModel,customerInfo:[String] = []  ,completion: @escaping (String) -> Void, notOk:@escaping (String)->Void ) {
         self.nviData = nviData
         self.parentVC = parentVC
         self.completion = completion
@@ -59,7 +60,7 @@ public final class AmaniUI: NSObject {
         parentVC.navigationController?.pushViewController(initilVC, animated: true)
 
     }
-    public func start(parentVC:UIViewController,server:String,username:String,password:String,customer:CustomerRequestModel, nviData:NviModel ,completion: @escaping (String) -> Void, notOk:@escaping (String)->Void ) {
+    public func start(parentVC:UIViewController,server:String,username:String,password:String,customer:CustomerRequestModel, nviData:NviModel, customerInfo:[String] = [] ,completion: @escaping (String) -> Void, notOk:@escaping (String)->Void ) {
         self.nviData = nviData
         self.parentVC = parentVC
         self.completion = completion
@@ -69,6 +70,7 @@ public final class AmaniUI: NSObject {
         self.username = username
         self.password = password
         self.customer = customer
+        self.customerInfo = customerInfo
         let initilVC = PersonalInfoViewController(nibName:String(describing: PersonalInfoViewController.self),bundle:Bundle(for: PersonalInfoViewController.self))
         parentVC.navigationController?.pushViewController(initilVC, animated: true)
         

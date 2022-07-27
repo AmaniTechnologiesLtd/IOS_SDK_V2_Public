@@ -1,10 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AmaniSDK
 import AVFoundation
 import Accelerate
+import AudioToolbox
 import CommonCrypto
 import CoreLocation
+import CoreMotion
 import CoreNFC
 import CryptoKit
 import CryptoTokenKit
@@ -13,10 +15,12 @@ import Metal
 import MetalKit
 import MetalPerformanceShaders
 import OpenSSL
+import SafariServices
 import Swift
 import UIKit
 import Vision
 import WebKit
+import _Concurrency
 public struct NFCRequest : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
@@ -51,6 +55,11 @@ public enum LogLevel : Swift.Int, Swift.CaseIterable {
   public class func warning(_ msg: @autoclosure () -> Swift.String)
   public class func error(_ msg: @autoclosure () -> Swift.String)
   public class func clearStoredLogs()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VideoCall {
+  public static let sharedInstance: AmaniSDK.VideoCall
+  public func start(stepId: Swift.Int = steps.front.rawValue) throws -> UIKit.UIViewController
   @objc deinit
 }
 public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable {
@@ -103,7 +112,7 @@ final public class Amani : ObjectiveC.NSObject {
   final public func setDelegate(delegate: AmaniSDK.AmaniDelegate)
   @objc deinit
 }
-extension Amani {
+extension AmaniSDK.Amani {
   final public func selfie() -> AmaniSDK.Selfie
   final public func autoSelfie() -> AmaniSDK.AutoSelfie
   final public func IdCapture() -> AmaniSDK.IDCapture
@@ -113,6 +122,9 @@ extension Amani {
   final public func document() -> AmaniSDK.Document
   final public func signature() -> AmaniSDK.Signature
   final public func customerInfo() -> AmaniSDK.CustomerInfo
+  @available(iOS 12.0, *)
+  final public func poseEstimation() -> AmaniSDK.PoseEstimation
+  final public func videoCall() -> AmaniSDK.VideoCall
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class COM : AmaniSDK.DataGroup {
@@ -173,7 +185,7 @@ public struct BPError {
 }
 @_hasMissingDesignatedInitializers public class CustomerInfo {
   public static let sharedInstance: AmaniSDK.CustomerInfo
-  public func setInfo(occupation: Swift.String?, address: AmaniSDK.Address)
+  public func setInfo(occupation: Swift.String?, address: AmaniSDK.AddressInfo)
   public func upload(location: CoreLocation.CLLocation?, completion: @escaping (Swift.Bool?, [AmaniSDK.AmaniError]?) -> Swift.Void)
   @objc deinit
 }
@@ -186,7 +198,7 @@ public enum NFCViewDisplayMessage {
   case successfulRead
 }
 @available(iOS 13, macOS 10.15, *)
-extension NFCViewDisplayMessage {
+extension AmaniSDK.NFCViewDisplayMessage {
   public var description: Swift.String {
     get
   }
@@ -317,7 +329,7 @@ public enum NFCPassportReaderError : Swift.Error {
   case NotYetSupported(Swift.String)
 }
 @available(iOS 13, macOS 10.15, *)
-extension NFCPassportReaderError : Foundation.LocalizedError {
+extension AmaniSDK.NFCPassportReaderError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -334,7 +346,7 @@ public enum OpenSSLError : Swift.Error {
   case UnableToDecryptRSASignature(Swift.String)
 }
 @available(iOS 13, macOS 10.15, *)
-extension OpenSSLError : Foundation.LocalizedError {
+extension AmaniSDK.OpenSSLError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -344,7 +356,7 @@ public enum PassiveAuthenticationError : Swift.Error {
   case InvalidDataGroupHash(Swift.String)
   case SODMissing(Swift.String)
 }
-extension PassiveAuthenticationError : Foundation.LocalizedError {
+extension AmaniSDK.PassiveAuthenticationError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -389,7 +401,11 @@ public struct CustomerResponseModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct Address : Swift.Codable {
+public struct AddressInfo : Swift.Codable {
+  public var city: Swift.String?
+  public var address: Swift.String?
+  public var province: Swift.String?
+  public init(city: Swift.String? = nil, address: Swift.String? = nil, province: Swift.String? = nil)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -424,8 +440,32 @@ public enum poseState : Swift.String {
   case faceTooBig
   case faceTooSmall
   case faceIsOk
+  case closedEyes
   case notInArea
+  case wrongPose
+  case phonePitch
+  case turnedRight
+  case turnedLeft
+  case turnedUp
+  case turnedDown
+  case straightFace
   case completed
+  case errorMessage
+  case tekrarDene
+  case errorTitle
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum poseConfigState : Swift.String {
+  case ovalBorderColor
+  case ovalBorderSuccessColor
+  case primaryButtonBackgroundColor
+  case appFontColor
+  case appBackgroundColor
+  case poseCount
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -485,11 +525,10 @@ public class PassportReader : ObjectiveC.NSObject {
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func overrideNFCDataAmountToRead(amount: Swift.Int)
   public func readPassport(mrzKey: Swift.String, tags: [AmaniSDK.DataGroupId] = [], skipSecureElements: Swift.Bool = true, customDisplayMessage: ((AmaniSDK.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (AmaniSDK.NFCPassportModel?, AmaniSDK.NFCPassportReaderError?) -> ())
-  @objc override dynamic public init()
   @objc deinit
 }
 @available(iOS 13, *)
-extension PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
+extension AmaniSDK.PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
   public func tagReaderSessionDidBecomeActive(_ session: CoreNFC.NFCTagReaderSession)
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: Swift.Error)
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
@@ -681,9 +720,9 @@ public class NFCPassportModel {
   public func verifyActiveAuthentication(challenge: [Swift.UInt8], signature: [Swift.UInt8])
   @objc deinit
 }
-extension UINavigationController {
-  @objc override dynamic open var shouldAutorotate: Swift.Bool {
-    @objc get
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
 }
 @_hasMissingDesignatedInitializers public class AutoSelfie {
@@ -728,7 +767,7 @@ public class BACHandler {
   public var kifd: [Swift.UInt8]
   public init()
   public init(tagReader: AmaniSDK.TagReader)
-  public func performBACAndGetSessionKeys(mrzKey: Swift.String, completed: @escaping (AmaniSDK.NFCPassportReaderError?) -> ())
+  public func performBACAndGetSessionKeys(mrzKey: Swift.String, completed: @escaping (_ error: AmaniSDK.NFCPassportReaderError?) -> ())
   public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
   @objc deinit
 }
@@ -824,19 +863,20 @@ public class ScanNFC {
   public static let sharedInstance: AmaniSDK.ScanNFC
   public func setType(type: Swift.String)
   public func start(nviData: AmaniSDK.NviModel, completion: @escaping ((AmaniSDK.NFCRequest?, AmaniSDK.AmaniError?) -> Swift.Void)) throws
-  public func upload(location: CoreLocation.CLLocation?, completion: @escaping (Swift.Bool?, [AmaniSDK.AmaniError]?) -> Swift.Void)
+  public func upload(location: CoreLocation.CLLocation? = nil, completion: @escaping (Swift.Bool?, [AmaniSDK.AmaniError]?) -> Swift.Void)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ImageCheck {
   public func blurCheck(image: CoreGraphics.CGImage, blurVariance: Swift.Int = 5) -> Swift.Bool
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class PoseEstimation {
-  public static let sharedInstance: AmaniSDK.AutoSelfie
+@_hasMissingDesignatedInitializers @available(iOS 12.0, *)
+public class PoseEstimation {
+  public static let sharedInstance: AmaniSDK.PoseEstimation
   public func setType(type: Swift.String)
   public func setManualCropTimeout(Timeout: Swift.Int)
-  public func setInfoMessages(infoMessages: [AmaniSDK.infoState : Swift.String])
-  public func setScreenConfig(screenConfig: [AmaniSDK.configState : Swift.String])
+  public func setInfoMessages(infoMessages: [AmaniSDK.poseState : Swift.String])
+  public func setScreenConfig(screenConfig: [AmaniSDK.poseConfigState : Swift.String])
   public func start(stepId: Swift.Int = steps.front.rawValue, completion: @escaping (UIKit.UIImage) -> Swift.Void) throws -> UIKit.UIView?
   public func upload(location: CoreLocation.CLLocation? = nil, completion: @escaping (Swift.Bool?, [AmaniSDK.AmaniError]?) -> Swift.Void)
   @objc deinit
@@ -1090,6 +1130,9 @@ extension AmaniSDK.configState : Swift.RawRepresentable {}
 extension AmaniSDK.poseState : Swift.Equatable {}
 extension AmaniSDK.poseState : Swift.Hashable {}
 extension AmaniSDK.poseState : Swift.RawRepresentable {}
+extension AmaniSDK.poseConfigState : Swift.Equatable {}
+extension AmaniSDK.poseConfigState : Swift.Hashable {}
+extension AmaniSDK.poseConfigState : Swift.RawRepresentable {}
 @available(iOS 13, macOS 10.15, *)
 extension AmaniSDK.DocTypeEnum : Swift.Equatable {}
 @available(iOS 13, macOS 10.15, *)
