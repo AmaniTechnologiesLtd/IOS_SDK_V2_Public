@@ -402,14 +402,14 @@ https://github.com/krzyzanowskim/OpenSSL
 ## Via Cocoapods
 
 Add sdk source to cocoapods
-```
+```ruby
 source "https://github.com/AmaniTechnologiesLtd/Mobile_SDK_Repo"
 source "https://github.com/CocoaPods/Specs"
 ```
 
 Adapt you Podfile and add the Amani SDK  
 
-```  
+```ruby 
 pod 'AmaniSDK'
 ```
 
