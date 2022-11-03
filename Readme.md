@@ -401,10 +401,16 @@ https://github.com/krzyzanowskim/OpenSSL
 
 ## Via Cocoapods
 
+Add sdk source to cocoapods
+```
+source "https://github.com/AmaniTechnologiesLtd/Mobile_SDK_Repo"
+source "https://github.com/CocoaPods/Specs"
+```
+
 Adapt you Podfile and add the Amani SDK  
 
 ```  
-pod 'AmaniSDK', :git => 'https://github.com/AmaniTechnologiesLtd/IOS_SDK_V2_Public.git'
+pod 'AmaniSDK'
 ```
 
 ## Via Carthage
