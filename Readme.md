@@ -391,6 +391,15 @@ add SFSafariViewControllerDelegate protocol to ViewController
               }
 ```
 
+##### Customer Info
+To get customer info from this SDK you can use `CustomerInfo` module
+
+```swift
+let customerInfo = Amani.sharedInstance.customerInfo()
+let customer: CustomerResponseModel = customerInfo.getCustomer()
+```
+
+
 # Installation
 
 You need to add openSSL package some of our customers wants to use as static library so we remove it from our dependicies.
