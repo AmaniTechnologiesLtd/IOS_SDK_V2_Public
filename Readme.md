@@ -164,7 +164,7 @@ class ViewController: UIViewController {
             // Customer login information
             let customer:CustomerRequestModel = CustomerRequestModel(name: "", email: "", phone: "", idCardNumber: "Mandatory needed to be filled")
             // Initialize SDK
-        amani.initAmani(server: "SERVER_URL", token: "TOKEN", sharedSecret: "SHAREDSECRETKEY", customer: customer, useGeoLocation: false, language: "tr"){ cmModel, error in
+        amani.initAmani(server: "SERVER_URL", token: "TOKEN", sharedSecret: "SHAREDSECRETKEY", customer: customer, useGeoLocation: false, language: "tr", uploadSource: .KYC){ cmModel, error in
             //cmModel is CustomerResponseModel?
             //error is NetworkError?
         }
