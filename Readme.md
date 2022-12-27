@@ -62,15 +62,15 @@ You can check this link for installing the OpenSSL via package managers or you c
 
 Add SDK source to cocoapods
 
-```
-source "<https://github.com/AmaniTechnologiesLtd/Mobile_SDK_Repo>"
-source "<https://github.com/CocoaPods/Specs>"
+```ruby
+source "https://github.com/AmaniTechnologiesLtd/Mobile_SDK_Repo"
+source "https://github.com/CocoaPods/Specs"
 
 ```
 
 Adapt your Podfile and add the Amani SDK
 
-```
+```ruby
 pod 'AmaniSDK'
 
 ```
@@ -80,7 +80,7 @@ pod 'AmaniSDK'
 Adapt your Cartfile and add the Amani SDK
 
 ```
-binary "<https://raw.githubusercontent.com/AmaniTechnologiesLtd/Public-IOS-SDK/main/Amani.json>"
+binary "https://raw.githubusercontent.com/AmaniTechnologiesLtd/Mobile_SDK_Repo/main/AmaniSDK.json"
 
 ```
 
