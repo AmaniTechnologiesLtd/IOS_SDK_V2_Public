@@ -371,14 +371,11 @@ amani.idCapture().upload(location: nil) { (status, error) in
 ```
 
 ## Pose Estimation Selfie
-
 Pose estimation requires customer to complete some poses on camera and takes a selfie.
 
 You can customize messages, and various colors by calling `poseEstimation.setScreenConfig()` and `poseEstimation.setInfoMessages()` methods respectively.
 
 You can also set a manual crop timeout with `poseEstimation.setManualCropTimeout()` method.
-
-Example below assumes that you have a `settings` struct with respective values.
 
 ```swift
  do {
@@ -386,37 +383,53 @@ Example below assumes that you have a `settings` struct with respective values.
 	
 	// configure screen config
 	poseEstimation.setScreenConfig(screenConfig: [
-      .appBackgroundColor: settings.appBackgroundColor,
-      .appFontColor: settings.appFontColor,
-      .primaryButtonBackgroundColor: settings.primaryButtonBackgroundColor,
-      .primaryButtonTextColor: settings.primaryButtonTextColor,
-      .ovalBorderColor: settings.ovalBorderColor,
-      .ovalBorderSuccessColor: settings.ovalBorderSuccessColor,
-      .poseCount: settings.poseCount,
-    ])
+      .appBackgroundColor: "000000",
+      .appFontColor: "ffffff",
+      .primaryButtonBackgroundColor: "ffffff",
+      .primaryButtonTextColor:"",
+      .ovalBorderSuccessColor: "00ff00",
+      .ovalBorderColor: "ffffff",
+      .poseCount: "2",
+      .mainGuideVisibility: "true",
+      .secondaryGuideVisibility: "true",
+      .buttonRadius:"10"
+  ])
 	
 	// configure info messages
 	poseEstimation.setInfoMessages(infoMessages: [
-      .faceIsOk: settings.faceIsOk,
-      .notInArea: settings.notInArea,
-      .faceTooSmall: settings.faceTooSmall,
-      .faceTooBig: settings.faceTooBig,
-      .completed: settings.completed,
-      .turnedRight: settings.turnedRight,
-      .turnedLeft: settings.turnedLeft,
-      .turnedUp: settings.turnedUp,
-      .turnedDown: settings.turnedDown,
-      .straightFace: settings.straightMessage,
-      .errorMessage: settings.errorMessage,
-      .sonraki: settings.next,
-      .tekrarDene: settings.tryAgain,
-      .errorTitle: settings.errorTitle,
-      .informationScreenDesc1: settings.informationScreenDesc1,
-      .informationScreenDesc2: settings.informationScreenDesc2,
-      .informationScreenTitle: settings.informationScreenTitle,
-      .wrongPose: settings.wrongPose,
-      .descriptionHeader: settings.descriptionHeader,
-    ])
+        .faceIsOk: "Please hold stable",
+        .notInArea: "Please align your face with the area",
+        .faceTooSmall:"Your face is too far",
+        .faceTooBig: "Your face is too close",
+        .completed: "All done!",
+        .turnedRight: "→",
+        .turnedLeft: "←",
+        .turnedUp: "↑",
+        .turnedDown: "↓",
+        .straightFace: "Look straight",
+        .errorMessage : "Please complete the steps without leaving your face outside the area",
+        .tryAgain: "Try again",
+        .errorTitle : "Failed",
+        .next: "Next",
+        .phonePitch: "Please hold your phone at correct angle",
+        .wrongPose: "Your face should match up with the pose",
+        .descriptionHeader: "Please align your face with the area and do the poses that will be showed on screen", 
+  ])
+
+  poseEstimation.setMainGuideImages(guideImages: [
+    .mainGuideUp: UIImage(named: "face_up"),
+    .mainGuideDown: UIImage(named: "face_down"),
+    .mainGuideLeft: UIImage(named: "face_left"),
+    .mainGuideRight: UIImage(named: "face_right"),
+    .mainGuideStraight: UIImage(named: "face_straight")
+  ])
+
+ poseEstimation.setSecondaryGuideImages(guideImages: [
+    .secondaryGuideUp: UIImage(named: "arrow_up"),
+    .secondaryGuideDown: UIImage(named: "arrow_down"),
+    .secondaryGuideRight: UIImage(named: "arrow_right"),
+    .secondaryGuideLeft: UIImage(named: "arrow_left")
+  ])
 
 	poseEstimation.setManualCropTimeout(Timeout: settings.manualCropTimeout)
 
